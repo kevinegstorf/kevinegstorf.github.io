@@ -38,12 +38,13 @@
 }
 
 /* Typography Styles */
-h1, h2 {
+h1,
+h2 {
   color: #fff;
 }
 
 p {
-  color: #0CF015;
+  color: #0cf015;
 }
 
 .sub-header-text {
@@ -51,12 +52,12 @@ p {
 }
 
 a {
-  color:   #8000FF;
+  color: #8000ff;
   transition: color 0.3s ease-in-out; /* Smooth color transition */
 }
 
 a:hover {
-  color: #0CF015;
+  color: #0cf015;
 }
 
 .fas {
@@ -67,14 +68,14 @@ a:hover {
 .card {
   background-color: rgba(45, 46, 49, 0.5);
   overflow: hidden;
-  backdrop-filter: blur(2px); 
+  backdrop-filter: blur(2px);
   border-radius: 0;
 }
 
 .card-line {
   border: none; /* Remove default border */
   height: 0.3rem; /* Set thickness of the line */
-  background: linear-gradient(90deg, #8000FF, #0CF015); /* Apply gradient from left to right */
+  background: linear-gradient(90deg, #8000ff, #0cf015); /* Apply gradient from left to right */
 }
 
 /* Line Animation */
@@ -82,7 +83,7 @@ a:hover {
   width: 38vw;
   border: none; /* Remove default border */
   height: 0.3rem; /* Set thickness of the line */
-  background: linear-gradient(90deg, #8000FF, #0CF015); /* Apply gradient */
+  background: linear-gradient(90deg, #8000ff, #0cf015); /* Apply gradient */
   background-size: 200% 100%; /* Double the width of the gradient for smooth animation */
   animation: moveGradient 4s linear infinite; /* Animate gradient */
 }
@@ -105,7 +106,7 @@ a:hover {
   border-radius: 50%;
   width: 15em;
   height: 15em;
-  border: 2px solid #0CF015;
+  border: 2px solid #0cf015;
   text-align: center;
 }
 
@@ -162,7 +163,7 @@ img {
   content: '';
   flex-grow: 1; /* Fill remaining space */
   height: 4px; /* Match the height of .card-line */
-  background: linear-gradient(90deg, #8000FF, #0CF015);
+  background: linear-gradient(90deg, #8000ff, #0cf015);
   border-radius: 2px; /* Match the border-radius of .card-line */
   overflow: hidden;
   position: relative;
@@ -182,18 +183,17 @@ img {
   color: white;
 }
 
-.portfolio-progress li[data-progress="100%"]::after {
+.portfolio-progress li[data-progress='100%']::after {
   width: 100%;
 }
 
-.portfolio-progress li[data-progress="80%"]::after {
+.portfolio-progress li[data-progress='80%']::after {
   width: 80%;
 }
 
-.portfolio-progress li[data-progress="60%"]::after {
+.portfolio-progress li[data-progress='60%']::after {
   width: 60%;
 }
-
 
 /* Footer Styles */
 .footer {
@@ -207,7 +207,7 @@ img {
 }
 
 .badge {
-  background-color: #0CF015;
+  background-color: #0cf015;
   color: #8000ff;
 }
 
