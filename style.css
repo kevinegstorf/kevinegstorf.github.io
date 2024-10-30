@@ -7,6 +7,12 @@
   --muted-text-color: #BCB1B1;
 }
 
+/* General Styles */
+body, html {
+  overflow-y: hidden; /* Prevent vertical scrolling */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
 /* Background Styles */
 .bg {
   height: 100vh;
