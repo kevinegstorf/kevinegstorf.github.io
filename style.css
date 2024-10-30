@@ -1,0 +1,181 @@
+.bg {
+  height: 100vh;
+  width: 100vw;
+  position: fixed; /* Keeps the background in a fixed position */
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  transform: scale(1);
+  z-index: 0;
+}
+
+.bg::before {
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+  background-attachment: fixed; /* Ensures background is fixed in place */
+  background-image: url('grid.svg'), linear-gradient(45deg, rgb(36, 36, 38) 63%, rgb(33, 33, 36) 71%);
+  background-size: 100% 150%, auto;
+  background-position: center center, 0% 0%;
+  background-repeat: no-repeat, repeat;
+}
+
+.container {
+  z-index: 1; /* Stays above the background */
+  padding: 0rem;
+  font-family: 'Inter', sans-serif;
+  margin-top: 15vh;
+  max-width: 50rem;
+  color: #fff;
+  height: 80vh;
+}
+
+
+h1, h2 {
+  color: #fff;
+}
+
+a {
+  color: #0CF015;
+  transition: color 0.3s ease-in-out; /* Smooth color transition */
+}
+
+a:hover {
+  color: #8000FF;
+}
+p {
+  color: #939496
+}
+
+.sub-header-text{
+  font-size: 1.5em;
+}
+
+.fas {
+  font-size: 1.5em;
+}
+.card {
+  background-color: rgba(45, 46, 49, 0.5);
+  overflow: hidden;
+  backdrop-filter: blur(2px); 
+  border-radius: 0;
+}
+
+.intro-icon-wrapper{
+  max-width: 7em;
+}
+
+
+.avatar {
+  padding-top: 6px;
+  border-radius: 50%;
+  width: 15em;
+  height: 15em;
+  border: 2px solid #0CF015;
+  text-align: center;
+}
+
+img {
+  border-radius: 50%;
+  width: 14em;
+  height: 14em;
+  align-items: center;
+}
+
+.line {
+  width: 38vw;
+  border: none; /* Remove default border */
+  height: 0.3rem; /* Set thickness of the line */
+  background: linear-gradient(90deg, #8000FF, #0CF015); /* Apply gradient */
+  background-size: 200% 100%; /* Double the width of the gradient for smooth animation */
+  animation: moveGradient 4s linear infinite; /* Animate gradient */
+}
+
+/* Keyframes for the moving gradient animation */
+@keyframes moveGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.card-line {
+  /* width: 32vw; */
+  border: none; /* Remove default border */
+  height: 0.3rem; /* Set thickness of the line */
+  background: linear-gradient(90deg, #8000FF, #0CF015); /* Apply gradient from left to right *//* Optional: round the edges */
+}
+
+#text-transition {
+  transition: opacity 0.5s ease-in-out; /* Smooth ease transition */
+}
+
+.fade-in {
+  opacity: 1;
+}
+
+.fade-out {
+  opacity: 0;
+}
+
+.p-4 ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.p-4 ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.foo li {
+  position: relative;
+  margin-bottom: 1rem;
+  height: 4px; /* Match the height of .card-line */
+  background: linear-gradient(90deg, #8000FF, #0CF015);
+  border-radius: 2px; /* Match the border-radius of .card-line */
+  overflow: hidden;
+}
+
+.foo li::before {
+  content: attr(data-progress);
+  position: absolute;
+  top: -1.5rem; /* Adjust to position the text above the progress bar */
+  left: 0;
+  font-weight: bold;
+  color: white;
+}
+
+.foo li::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  transition: width 0.5s ease-in-out;
+}
+
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* #8000FF */
+/* #0CF015 */
