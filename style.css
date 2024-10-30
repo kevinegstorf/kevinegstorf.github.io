@@ -1,3 +1,12 @@
+/* Define Color Variables */
+:root {
+  --primary-color: #8000FF;
+  --secondary-color: #0CF015;
+  --accent-color: #DB61C8;
+  --text-color: #FFFFFF;
+  --muted-text-color: #BCB1B1;
+}
+
 /* Background Styles */
 .bg {
   height: 100vh;
@@ -33,18 +42,18 @@
   font-family: 'Inter', sans-serif;
   margin-top: 15vh;
   max-width: 50rem;
-  color: #fff;
+  color: var(--text-color);
   height: 80vh;
 }
 
 /* Typography Styles */
 h1,
 h2 {
-  color: #fff;
+  color: var(--text-color);
 }
 
 p {
-  color: #0cf015;
+  color: var(--secondary-color);
 }
 
 .sub-header-text {
@@ -52,12 +61,17 @@ p {
 }
 
 a {
-  color: #DB61C8;
+  color: var(--accent-color);
   transition: color 0.3s ease-in-out; /* Smooth color transition */
+  
 }
 
 a:hover {
-  color: #0cf015;
+  color: var(--secondary-color);
+}
+
+.fab {
+  font-size: 3em;
 }
 
 .fas {
@@ -75,7 +89,7 @@ a:hover {
 .card-line {
   border: none; /* Remove default border */
   height: 0.3rem; /* Set thickness of the line */
-  background: linear-gradient(90deg, #8000ff, #0cf015); /* Apply gradient from left to right */
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color)); /* Apply gradient from left to right */
 }
 
 /* Line Animation */
@@ -83,7 +97,7 @@ a:hover {
   width: 38vw;
   border: none; /* Remove default border */
   height: 0.3rem; /* Set thickness of the line */
-  background: linear-gradient(90deg, #8000ff, #0cf015); /* Apply gradient */
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color)); /* Apply gradient */
   background-size: 200% 100%; /* Double the width of the gradient for smooth animation */
   animation: moveGradient 4s linear infinite; /* Animate gradient */
 }
@@ -106,7 +120,7 @@ a:hover {
   border-radius: 50%;
   width: 15em;
   height: 15em;
-  border: 2px solid #0cf015;
+  border: 2px solid var(--secondary-color);
   text-align: center;
 }
 
@@ -140,6 +154,7 @@ img {
   list-style-type: none;
   padding: 0;
 }
+
 .portfolio-progress ul {
   list-style-type: none; /* Remove bullets */
   padding: 0;
@@ -155,7 +170,7 @@ img {
 
 .portfolio-progress li span {
   font-weight: bold;
-  color: white;
+  color: var(--muted-text-color);
   margin-right: 1rem; /* Space between text and progress bar */
 }
 
@@ -163,7 +178,7 @@ img {
   content: '';
   flex-grow: 1; /* Fill remaining space */
   height: 4px; /* Match the height of .card-line */
-  background: linear-gradient(90deg, #8000ff, #0cf015);
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
   border-radius: 2px; /* Match the border-radius of .card-line */
   overflow: hidden;
   position: relative;
@@ -180,7 +195,7 @@ img {
   top: -1.5rem; /* Position the percentage above the bar */
   right: 0; /* Align to the right end of the bar */
   font-weight: bold;
-  color: white;
+  color: var(--text-color);
 }
 
 .portfolio-progress li[data-progress='100%']::after {
@@ -197,8 +212,7 @@ img {
 
 /* Footer Styles */
 .footer {
-  background-color: #333;
-  color: white;
+  color: var(--text-color);
   text-align: center;
   padding: 1rem;
   position: relative;
@@ -207,8 +221,8 @@ img {
 }
 
 .badge {
-  background-color: #0cf015;
-  color: #DB61C8;
+  background-color: var(--secondary-color);
+  color: var(--accent-color);
 }
 
 .lang-span {
@@ -216,12 +230,33 @@ img {
 }
 
 .button-primary {
-  background-color: #DB61C8;
-  border-color: #0cf015;
+  background: var(--accent-color);
+  border-radius: 999px;
+  box-shadow: var(--accent-color) 0 10px 20px -10px;
+  box-sizing: border-box;
+  color: var(--text-color);
+  cursor: pointer;
+  font-family: Inter, Helvetica, "Apple Color Emoji", "Segoe UI Emoji", NotoColorEmoji, "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji", EmojiSymbols, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  opacity: 1;
+  outline: 0 solid transparent;
+  padding: 8px 18px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: fit-content;
+  word-break: break-word;
+  border: 0;
+  text-decoration: none;
 }
 
-/* Color Variables */
-/* #8000FF */
-/* #0CF015 */
+.button-primary:hover {
+  color: var(--text-color);
+}
 
-/* #DB61C8 */
+.footer {
+  margin: 0 auto;
+  max-width: 40em;
+}
