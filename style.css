@@ -112,7 +112,7 @@ a:hover {
   animation: moveGradient 4s linear infinite; /* Animate gradient */
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .line {
     width: 100vw; /* Full width of the viewport on mobile */
     margin-left: -50vw; /* Center the line */
