@@ -32,12 +32,3 @@ function updateText() {
 setInterval(updateText, 3500);
 // Initialize the first text immediately
 updateText();
-
-document.addEventListener('DOMContentLoaded', () => {
-  const listItems = document.querySelectorAll('.p-4 li');
-  listItems.forEach(item => {
-    const progress = item.getAttribute('data-progress');
-    item.style.setProperty('--progress', progress);
-    item.style.width = progress;
-  });
-});

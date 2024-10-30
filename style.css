@@ -1,3 +1,4 @@
+/* Background Styles */
 .bg {
   height: 100vh;
   width: 100vw;
@@ -25,6 +26,7 @@
   background-repeat: no-repeat, repeat;
 }
 
+/* Container Styles */
 .container {
   z-index: 1; /* Stays above the background */
   padding: 0rem;
@@ -35,30 +37,33 @@
   height: 80vh;
 }
 
-
+/* Typography Styles */
 h1, h2 {
   color: #fff;
 }
 
-a {
+p {
   color: #0CF015;
+}
+
+.sub-header-text {
+  font-size: 1.5em;
+}
+
+a {
+  color:   #8000FF;
   transition: color 0.3s ease-in-out; /* Smooth color transition */
 }
 
 a:hover {
-  color: #8000FF;
-}
-p {
-  color: #939496
-}
-
-.sub-header-text{
-  font-size: 1.5em;
+  color: #0CF015;
 }
 
 .fas {
   font-size: 1.5em;
 }
+
+/* Card Styles */
 .card {
   background-color: rgba(45, 46, 49, 0.5);
   overflow: hidden;
@@ -66,11 +71,35 @@ p {
   border-radius: 0;
 }
 
-.intro-icon-wrapper{
-  max-width: 7em;
+.card-line {
+  border: none; /* Remove default border */
+  height: 0.3rem; /* Set thickness of the line */
+  background: linear-gradient(90deg, #8000FF, #0CF015); /* Apply gradient from left to right */
 }
 
+/* Line Animation */
+.line {
+  width: 38vw;
+  border: none; /* Remove default border */
+  height: 0.3rem; /* Set thickness of the line */
+  background: linear-gradient(90deg, #8000FF, #0CF015); /* Apply gradient */
+  background-size: 200% 100%; /* Double the width of the gradient for smooth animation */
+  animation: moveGradient 4s linear infinite; /* Animate gradient */
+}
 
+@keyframes moveGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Avatar Styles */
 .avatar {
   padding-top: 6px;
   border-radius: 50%;
@@ -87,35 +116,12 @@ img {
   align-items: center;
 }
 
-.line {
-  width: 38vw;
-  border: none; /* Remove default border */
-  height: 0.3rem; /* Set thickness of the line */
-  background: linear-gradient(90deg, #8000FF, #0CF015); /* Apply gradient */
-  background-size: 200% 100%; /* Double the width of the gradient for smooth animation */
-  animation: moveGradient 4s linear infinite; /* Animate gradient */
+/* Intro Icon Wrapper */
+.intro-icon-wrapper {
+  max-width: 7em;
 }
 
-/* Keyframes for the moving gradient animation */
-@keyframes moveGradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-.card-line {
-  /* width: 32vw; */
-  border: none; /* Remove default border */
-  height: 0.3rem; /* Set thickness of the line */
-  background: linear-gradient(90deg, #8000FF, #0CF015); /* Apply gradient from left to right *//* Optional: round the edges */
-}
-
+/* Text Transition */
 #text-transition {
   transition: opacity 0.5s ease-in-out; /* Smooth ease transition */
 }
@@ -128,45 +134,68 @@ img {
   opacity: 0;
 }
 
+/* Progress Bar Styles */
 .p-4 ul {
   list-style-type: none;
   padding: 0;
 }
-
-.p-4 ul {
-  list-style-type: none;
+.portfolio-progress ul {
+  list-style-type: none; /* Remove bullets */
   padding: 0;
+  margin: 0;
 }
 
-.foo li {
-  position: relative;
+.portfolio-progress li {
+  display: flex; /* Flex layout for horizontal alignment */
+  align-items: center; /* Center-align text and bar vertically */
   margin-bottom: 1rem;
+  position: relative;
+}
+
+.portfolio-progress li span {
+  font-weight: bold;
+  color: white;
+  margin-right: 1rem; /* Space between text and progress bar */
+}
+
+.portfolio-progress li::after {
+  content: '';
+  flex-grow: 1; /* Fill remaining space */
   height: 4px; /* Match the height of .card-line */
   background: linear-gradient(90deg, #8000FF, #0CF015);
   border-radius: 2px; /* Match the border-radius of .card-line */
   overflow: hidden;
+  position: relative;
+  display: block;
+  margin-left: 1rem; /* Space between text and progress bar */
+  width: 0; /* Initial width */
+  transition: width 0.5s ease-in-out; /* Smooth fill animation */
+  z-index: 1;
 }
 
-.foo li::before {
-  content: attr(data-progress);
+/* Adjust progress text above the bar */
+.portfolio-progress li::before {
   position: absolute;
-  top: -1.5rem; /* Adjust to position the text above the progress bar */
-  left: 0;
+  top: -1.5rem; /* Position the percentage above the bar */
+  right: 0; /* Align to the right end of the bar */
   font-weight: bold;
   color: white;
 }
 
-.foo li::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.2);
-  z-index: 1;
-  transition: width 0.5s ease-in-out;
+.portfolio-progress li[data-progress="100%"]::after {
+  width: 100%;
 }
 
+.portfolio-progress li[data-progress="80%"]::after {
+  width: 80%;
+}
+
+.portfolio-progress li[data-progress="60%"]::after {
+  width: 60%;
+}
+
+
+/* Footer Styles */
 .footer {
   background-color: #333;
   color: white;
@@ -177,5 +206,15 @@ img {
   width: 100%;
 }
 
+.badge {
+  background-color: #0CF015;
+  color: #8000ff;
+}
+
+.lang-span {
+  min-width: 8em;
+}
+
+/* Color Variables */
 /* #8000FF */
 /* #0CF015 */
