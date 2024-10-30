@@ -5,6 +5,7 @@ const textArray = [
   'JavaScript Developer',
   'Software Developer',
   'Frontend Developer',
+  'Team Player',
 ];
 let currentIndex = 0;
 const textElement = document.getElementById('text-transition');

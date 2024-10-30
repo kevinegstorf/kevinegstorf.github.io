@@ -63,7 +63,6 @@ p {
 a {
   color: var(--accent-color);
   transition: color 0.3s ease-in-out; /* Smooth color transition */
-  
 }
 
 a:hover {
@@ -100,6 +99,15 @@ a:hover {
   background: linear-gradient(90deg, var(--primary-color), var(--secondary-color)); /* Apply gradient */
   background-size: 200% 100%; /* Double the width of the gradient for smooth animation */
   animation: moveGradient 4s linear infinite; /* Animate gradient */
+}
+
+@media (max-width: 993px) {
+  .line {
+    width: 100vw; /* Full width of the viewport on mobile */
+    margin-left: -50vw; /* Center the line */
+    left: 50%;
+    position: relative;
+  }
 }
 
 @keyframes moveGradient {
@@ -250,13 +258,25 @@ img {
   word-break: break-word;
   border: 0;
   text-decoration: none;
+  transition: background-color 0.3s ease-in, box-shadow 0.3s ease-in; /* Add transition for smooth animation */
 }
 
 .button-primary:hover {
+  background: var(--primary-color);
+  box-shadow: var(--primary-color) 0 10px 20px -10px;
   color: var(--text-color);
 }
 
 .footer {
   margin: 0 auto;
   max-width: 40em;
+}
+
+.footer-icon-bg{
+  background-color: rgba(45, 46, 49, 0.5);
+  padding: 0.5em;
+  padding-top: 0.8em;
+  border-radius: 50%;
+  width: 4.5em;
+  height: 4.5em;
 }
