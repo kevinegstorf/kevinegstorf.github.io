@@ -52,7 +52,7 @@ p {
 }
 
 a {
-  color: #8000ff;
+  color: #DB61C8;
   transition: color 0.3s ease-in-out; /* Smooth color transition */
 }
 
@@ -208,13 +208,20 @@ img {
 
 .badge {
   background-color: #0cf015;
-  color: #8000ff;
+  color: #DB61C8;
 }
 
 .lang-span {
   min-width: 8em;
 }
 
+.btn-primary {
+  background-color: #DB61C8;
+  border-color: #0cf015;
+}
+
 /* Color Variables */
 /* #8000FF */
 /* #0CF015 */
+
+/* #DB61C8 */

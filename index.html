@@ -20,7 +20,7 @@
 <body>
   <div class="bg">
   </div>
-  <div class="container">
+  <div class="container" id="xp-heading">
     <div class="row mb-4">
       <div class="col-12">
         <div class="card">
@@ -77,32 +77,58 @@
           </div>
         </div>
       </div>
-      <div class="col">
+      <div  class="col">
         <div class="card">
           <div class="card-line"></div>
           <div class="p-4 portfolio-progress">
-            <h2>XP</h2>
-
+            <h2 >XP</h2>
             <h4>Languages</h4>
             <ul>
               <li data-progress="100%"><span class="lang-span">Typescript</span></li>
               <li data-progress="100%"><span class="lang-span">JavaScript</span></li>
-              <li data-progress="50%"><span class="lang-span">Ruby</span></li>
+              <li data-progress="80%"><span class="lang-span">Ruby</span></li>
               <li data-progress="80%"><span class="lang-span">Python</span></li>
-              <li data-progress="30%"><span class="lang-span">Java</span></li>
+              <li data-progress="80%"><span class="lang-span">Java</span></li>
             </ul>
-            <h4>Frameworks</h4>
-            <ul>
-              <li ><span>React</span></li>
-              <li><span>Angular</span></li>
-              <li><span>Vue</span></li>
-              <li ><span>Testing</span></li>
-              <li><span>CSS</span></li>
-            </ul>
+            <div class="d-none" id="more-content">
+
+
+              <h4>Markup and styling</h4>
+              <ul>
+                <li data-progress="100%"><span class="lang-span">HTML</span></li>
+                <li data-progress="100%"><span class="lang-span">CSS</span></li>
+                <li data-progress="100%"><span class="lang-span">Sass</span></li>
+                <li data-progress="100%"><span class="lang-span">Less</span></li>
+                <li data-progress="100%"><span class="lang-span">Stylus</span></li>
+                <li data-progress="100%"><span class="lang-span">PostCSS</span></li>
+
+                <h4>Frameworks</h4>
+                <ul>
+                  <li data-progress="100%"><span class="lang-span">React</span></li>
+                  <li data-progress="100%"><span class="lang-span">Angular</span></li>
+                  <li data-progress="80%"><span class="lang-span">Vue</span></li>
+                </ul>
+                <h4>Testing</h4>
+                <ul>
+                  <li data-progress="100%"><span class="lang-span">Jest</span></li>
+                  <li data-progress="100%"><span class="lang-span">Spectator</span></li>
+                  <li data-progress="100%"><span class="lang-span">Playwright</span></li>
+                  <li data-progress="100%"><span class="lang-span">Cypress</span></li>
+                  <li data-progress="100%"><span class="lang-span">Cucumber</span></li>
+                </ul>
+                <h4>Devops</h4>
+                <ul>
+                  <li data-progress="100%"><span class="lang-span">Docker</span></li>
+                  <li data-progress="100%"><span class="lang-span">Azure</span></li>
+                  <li data-progress="100%"><span class="lang-span">Yaml</span></li>
+                  <li data-progress="100%"><span class="lang-span">Yapl</span></li>
+                </ul>
+            </div>
+            <button class="button-primary " id="show-more-btn">Show More</button>
           </div>
         </div>
       </div>
-      
+
     </div>
     <div class="row">
       <div class="col">
@@ -138,15 +164,15 @@
               <span class="badge text-bg-primary">Redux</span>
               <span class="badge text-bg-primary">Jest</span>
               <span class="badge text-bg-primary">Material design</span>
-
             </p>
-            <p>Tele2 
+            <p>Tele2
               <span class="badge text-bg-primary">TypeScript</span>
               <span class="badge text-bg-primary">React</span>
               <span class="badge text-bg-primary">Vue</span>
               <span class="badge text-bg-primary">Redux</span>
               <span class="badge text-bg-primary">Jest</span>
-              <span class="badge text-bg-primary">Material design</span></p>
+              <span class="badge text-bg-primary">Material design</span>
+            </p>
             <p>Frontmen IO
               <span class="badge text-bg-primary">TypeScript</span>
               <span class="badge text-bg-primary">React</span>
@@ -155,7 +181,7 @@
               <span class="badge text-bg-primary">Jest</span>
               <span class="badge text-bg-primary">Material design</span>
             </p>
-            <p>Triple 
+            <p>Triple
               <span class="badge text-bg-primary">TypeScript</span>
               <span class="badge text-bg-primary">React</span>
               <span class="badge text-bg-primary">Redux</span>
@@ -178,8 +204,10 @@
           <div class="p-4">
             <h2>Current Role</h2>
             <p>At the Ministry of Justice and Security, I am developing a web application within the "Open op Orde"
-              program, which aims to enhance the transparency and accessibility of government data. Built with Angular
-              18 and TypeScript, the application serves as a data accounting tool to support responsible and transparent
+              program, which aims to enhance the transparency and accessibility of government data. Built with <span
+                class="badge text-bg-primary">Angular 18</span>
+              and <span class="badge text-bg-primary">TypeScript</span>, the application serves as a data accounting
+              tool to support responsible and transparent
               data management within government agencies. For testing, we use Spectator, Jest, and Playwright to ensure
               robustness. By setting clear data guidelines, the project fosters public trust and privacy, aligns with
               the government's transparency goals, and boosts internal efficiency.</p>

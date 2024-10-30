@@ -32,3 +32,29 @@ function updateText() {
 setInterval(updateText, 3500);
 // Initialize the first text immediately
 updateText();
+
+document.addEventListener('DOMContentLoaded', () => {
+  const listItems = document.querySelectorAll('.p-4 li');
+  listItems.forEach(item => {
+    const progress = item.getAttribute('data-progress');
+    item.style.setProperty('--progress', progress);
+    item.style.width = progress;
+  });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const showMoreBtn = document.getElementById('show-more-btn');
+  const moreContent = document.getElementById('more-content');
+  const xpHeading = document.getElementById('xp-heading');
+
+  showMoreBtn.addEventListener('click', () => {
+    if (moreContent.classList.contains('d-none')) {
+      moreContent.classList.remove('d-none');
+      showMoreBtn.textContent = 'Show Less';
+    } else {
+      moreContent.classList.add('d-none');
+      showMoreBtn.textContent = 'Show More';
+      xpHeading.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+});
