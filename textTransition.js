@@ -30,7 +30,7 @@ function updateText() {
 
 // Run updateText every 6 seconds
 setInterval(updateText, 3500);
-// Initialize the first text immediately
+
 updateText();
 
 document.addEventListener('DOMContentLoaded', () => {
