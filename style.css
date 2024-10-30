@@ -88,6 +88,7 @@ a:hover {
   background-color: rgba(45, 46, 49, 0.5);
   overflow: hidden;
   backdrop-filter: blur(2px); 
+  -webkit-backdrop-filter: blur(2px); /* Add backdrop filter for blur effect */
   border-radius: 0;
 }
 @media (max-width: 768px) {
