@@ -90,6 +90,11 @@ a:hover {
   backdrop-filter: blur(2px); 
   border-radius: 0;
 }
+@media (max-width: 768px) {
+  .card {
+   width: 100vw;
+  }
+}
 
 .card-line {
   border: none; /* Remove default border */
