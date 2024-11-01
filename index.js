@@ -59,36 +59,3 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
-
-document.addEventListener('DOMContentLoaded', () => {
-  const submitBtn = document.getElementById('submit-btn');
-  const emailInput = document.getElementById('email-input');
-
-  submitBtn.addEventListener('click', (event) => {
-    event.preventDefault();
-    const email = emailInput.value;
-
-    if (validateEmail(email)) {
-      sendEmail(email);
-    } else {
-      alert('Please enter a valid email address.');
-    }
-  });
-
-  function validateEmail(email) {
-    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return re.test(String(email).toLowerCase());
-  }
-
-  function sendEmail(email) {
-    emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', {
-      to_email: email,
-      message: 'I would like your resume.'
-    })
-    .then((response) => {
-      alert('Email sent successfully!');
-    }, (error) => {
-      alert('Failed to send email. Please try again later.');
-    });
-  }
-});
