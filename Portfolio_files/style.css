@@ -1,15 +1,14 @@
 /* Define Color Variables */
 :root {
-  --primary-color: #8000ff;
-  --secondary-color: #0cf015;
-  --accent-color: #db61c8;
-  --text-color: #ffffff;
-  --muted-text-color: #bcb1b1;
+  --primary-color: #8000FF;
+  --secondary-color: #0CF015;
+  --accent-color: #DB61C8;
+  --text-color: #FFFFFF;
+  --muted-text-color: #BCB1B1;
 }
 
 /* General Styles */
-body,
-html {
+body, html {
   box-sizing: border-box; /* Include padding and border in element's total width and height */
   margin: 0;
   padding: 0;
@@ -41,21 +40,26 @@ html {
   background-repeat: no-repeat, repeat;
 }
 
+@media (max-width: 768px) {
+  .bg::before {
+    background-size: cover, auto; /* Ensure background covers the entire viewport on mobile */
+  }
+}
+
 /* Container Styles */
 .container {
   z-index: 1; /* Stays above the background */
   padding: 0rem;
-  margin-top: 5vh;
-  max-width: 100%;
+  margin-top: 15vh;
+  max-width: 50rem;
   color: var(--text-color);
-  height: auto;
+  height: 80vh;
 }
 
 /* Typography Styles */
 h1,
 h2 {
   color: var(--text-color);
-  text-align: center;
 }
 
 p {
@@ -64,7 +68,6 @@ p {
 
 .sub-header-text {
   font-size: 1.5em;
-  text-align: center;
 }
 
 a {
@@ -84,10 +87,14 @@ a:hover {
 .card {
   background-color: rgba(45, 46, 49, 0.5);
   overflow: hidden;
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px); 
   -webkit-backdrop-filter: blur(2px); /* Add backdrop filter for blur effect */
   border-radius: 0;
-  width: 100vw;
+}
+@media (max-width: 768px) {
+  .card {
+   width: 100vw;
+  }
 }
 
 .card-line {
@@ -98,14 +105,36 @@ a:hover {
 
 /* Line Animation */
 .line {
-  width: 100vw;
-  right: 1em;
-  position: relative;
+  width: 38vw;
   border: none; /* Remove default border */
   height: 0.3rem; /* Set thickness of the line */
   background: linear-gradient(90deg, var(--primary-color), var(--secondary-color)); /* Apply gradient */
   background-size: 200% 100%; /* Double the width of the gradient for smooth animation */
   animation: moveGradient 4s linear infinite; /* Animate gradient */
+}
+
+@media (max-width: 992px) {
+  .line {
+    width: 100vw; /* Full width of the viewport on mobile */
+    margin-left: -50vw; /* Center the line */
+    left: 50%;
+    position: relative;
+  }
+
+  .avatar {
+    width: 100%; /* Full width on mobile */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  img {
+    width: 100%; /* Full width on mobile */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .container {
+    height: auto; /* Adjust height for mobile */
+    margin-top: 5vh; /* Adjust margin for mobile */
+  }
 }
 
 @keyframes moveGradient {
@@ -124,26 +153,25 @@ a:hover {
 .avatar {
   padding-top: 6px;
   border-radius: 50%;
-  width: 20em;
-  height: auto; /* Maintain aspect ratio */
+  width: 15em;
+  height: 15em;
   border: 2px solid var(--secondary-color);
   text-align: center;
   display: flex;
   justify-content: center;
-  margin: 0 auto;
+  align-items: center;
 }
 
 img {
   border-radius: 50%;
-  width: 100%; /* Full width on mobile */
-  height: auto; /* Maintain aspect ratio */
+  width: 14em;
+  height: 14em;
   align-items: center;
 }
 
 /* Intro Icon Wrapper */
 .intro-icon-wrapper {
-  max-width: 11em;
-  margin: 0 auto;
+  max-width: 7em;
 }
 
 /* Text Transition */
@@ -227,7 +255,7 @@ img {
   padding: 1rem;
   position: relative;
   bottom: 0;
-  width: 100%;
+  width: 40rem;
   margin: 0 auto;
 }
 
@@ -247,6 +275,7 @@ img {
   box-sizing: border-box;
   color: var(--text-color);
   cursor: pointer;
+  font-family: Inter, Helvetica, "Apple Color Emoji", "Segoe UI Emoji", NotoColorEmoji, "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji", EmojiSymbols, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", sans-serif;
   font-size: 16px;
   font-weight: 700;
   line-height: 24px;
@@ -256,7 +285,7 @@ img {
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  width: 100%; /* Full width on mobile */
+  width: fit-content;
   word-break: break-word;
   border: 0;
   text-decoration: none;
@@ -271,44 +300,4 @@ img {
 
 .fab {
   font-size: 3em;
-}
-
-/* Media Queries for Larger Screens */
-@media (min-width: 768px) {
-  h1,
-  h2,
-  .sub-header-text {
-    text-align: left;
-  }
-  .container {
-    margin-top: 15vh;
-    max-width: 50rem;
-    height: 80vh;
-  }
-
-  .card {
-    width: auto;
-  }
-
-  .avatar {
-    width: 15em;
-    height: 15em;
-  }
-
-  img {
-    width: 14em;
-    height: 14em;
-  }
-
-  .intro-icon-wrapper {
-    max-width: 7em;
-  }
-
-  .button-primary {
-    width: fit-content;
-  }
-
-  .footer {
-    width: 60%;
-  }
 }
