@@ -35,6 +35,7 @@
 
   gtag('config', 'G-X39VWJSPGF');
 </script>
+
 <body>
   <div class="bg"></div>
   <main class="container" id="xp-heading">
@@ -82,13 +83,31 @@
           <div class="p-4">
             <h2>About me</h2>
             <p>
-              I'm a passionate frontend developer with a strong backend foundation, dedicating my free time to expanding
-              my skills and staying ahead in tech.
-
-              With experience in crafting reusable code, unit testing, and integration testing, I love working with
-              clients to build solid architectures and streamline workflows for peak performance. Always eager to learn,
-              I'm constantly refining my expertise to deliver innovative solutions.
+              Hi there! 👋
+              <br></br>
+              I'm Kevin, a frontend developer with a solid backend foundation, driven by a passion for crafting
+              intuitive, scalable solutions. Currently, I work as a consultant at Codecapi, where I get to partner with
+              clients to tackle complex challenges and create impactful digital experiences.
+              <br></br>
+              Known for my positivity and collaborative spirit, I bring a unique combination of technical skill and
+              team-oriented energy that elevates both the quality of work and the morale of those around me. My
+              colleagues often describe me as someone who lifts the atmosphere, making even challenging tasks enjoyable
+              and productive.
+              <br></br>
+              My approach is rooted in clean, reusable code and rigorous testing to ensure peak performance. I stay
+              up-to-date with the latest frameworks and tools, bringing innovative solutions that optimize workflows and
+              support efficient development. I have a knack for introducing technologies that keep teams current,
+              allowing us to tackle complex challenges with confidence and agility.
+              <br></br>
+              In addition to my technical contributions, I’m always ready to help teammates brainstorm, troubleshoot,
+              and refine ideas. I believe the best outcomes emerge from open collaboration and mutual support, and I'm
+              committed to creating an environment where team members feel empowered to share their ideas.
+              <br></br>
+              With my dedication to growth, strong foundation across the stack, and enthusiasm for building impactful
+              solutions, I'm excited to bring my expertise to a forward-thinking company. I am confident in my ability
+              to deliver both technical value and a positive team dynamic that drives success.
             </p>
+
           </div>
         </article>
       </div>
@@ -128,9 +147,9 @@
                 <li data-progress="80%"><span class="lang-span">Vue</span></li>
                 <li data-progress="80%"><span class="lang-span">Node</span></li>
                 <li data-progress="80%"><span class="lang-span">Ruby on Rails</span></li>
-                <li data-progress="80%"><span class="lang-span">Spring</span></li>
+                <li data-progress="60%"><span class="lang-span">Spring</span></li>
                 <li data-progress="80%"><span class="lang-span">FastApi</span></li>
-                <li data-progress="80%"><span class="lang-span">Flask</span></li>
+                <li data-progress="60%"><span class="lang-span">Flask</span></li>
                 <li data-progress="80%"><span class="lang-span">Django</span></li>
               </ul>
               <h3>Testing</h3>
@@ -294,17 +313,18 @@
           </a>
         </div>
       </div>
-        <!-- Cookie Consent Block -->
-  <div id="cookie-consent" class="cookie-consent">
-    <p>We use cookies to ensure you get the best experience on our website. <a href="/privacy-policy">Learn more</a></p>
-    <button id="accept-cookies" class="button-primary">Accept</button>
-  </div>
+      <!-- Cookie Consent Block -->
+      <div id="cookie-consent" class="cookie-consent">
+        <p>We use cookies to ensure you get the best experience on our website. <a href="/privacy-policy">Learn more</a>
+        </p>
+        <button id="accept-cookies" class="button-primary">Accept</button>
+      </div>
 
     </footer>
   </main>
   <script src="index.js"></script>
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
       const cookieConsent = document.getElementById('cookie-consent');
       const acceptCookies = document.getElementById('accept-cookies');
 
@@ -312,7 +332,7 @@
         cookieConsent.style.display = 'block';
       }
 
-      acceptCookies.addEventListener('click', function() {
+      acceptCookies.addEventListener('click', function () {
         localStorage.setItem('cookiesAccepted', 'true');
         cookieConsent.style.display = 'none';
       });
