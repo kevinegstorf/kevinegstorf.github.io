@@ -35,7 +35,6 @@
 
   gtag('config', 'G-X39VWJSPGF');
 </script>
-
 <body>
   <div class="bg"></div>
   <main class="container" id="xp-heading">
@@ -244,7 +243,7 @@
           </div>
         </article>
       </div>
-    </section>
+    </section>vhrom
     <section class="row">
       <div class="col">
         <article class="card">
@@ -295,8 +294,31 @@
           </a>
         </div>
       </div>
+        <!-- Cookie Consent Block -->
+  <div id="cookie-consent" class="cookie-consent">
+    <p>We use cookies to ensure you get the best experience on our website. <a href="/privacy-policy">Learn more</a></p>
+    <button id="accept-cookies" class="button-primary">Accept</button>
+  </div>
+
     </footer>
   </main>
+  <script src="index.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const cookieConsent = document.getElementById('cookie-consent');
+      const acceptCookies = document.getElementById('accept-cookies');
+
+      if (!localStorage.getItem('cookiesAccepted')) {
+        cookieConsent.style.display = 'block';
+      }
+
+      acceptCookies.addEventListener('click', function() {
+        localStorage.setItem('cookiesAccepted', 'true');
+        cookieConsent.style.display = 'none';
+      });
+    });
+  </script>
+
   <script src="index.js"></script>
 </body>
 
