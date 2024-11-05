@@ -59,3 +59,30 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+  const cookieConsent = document.getElementById('cookie-consent');
+  const acceptCookies = document.getElementById('accept-cookies');
+
+  if (!localStorage.getItem('cookiesAccepted')) {
+    cookieConsent.style.display = 'block';
+  }
+
+  acceptCookies.addEventListener('click', function () {
+    localStorage.setItem('cookiesAccepted', 'true');
+    cookieConsent.style.display = 'none';
+  });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  const toggleButtons = document.querySelectorAll('.toggle-collapse');
+
+  toggleButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      const collapsibleContent = this.closest('.retro-card').querySelector('.collapsible-content');
+      collapsibleContent.classList.toggle('expanded');
+      this.classList.toggle('fa-chevron-up');
+      this.classList.toggle('fa-chevron-down');
+    });
+  });
+});

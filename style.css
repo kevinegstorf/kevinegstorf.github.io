@@ -80,6 +80,23 @@ a:hover {
   font-size: 1.5em;
 }
 
+.fa-chevron-up {
+  color: var(--accent-color);
+  cursor: pointer;
+}
+
+.company-name {
+  font-size: 1.5em;
+  color: var(--accent-color);
+}
+
+.retro-card{
+  border: 2px solid;
+  border-image: linear-gradient(90deg, var(--primary-color), var(--secondary-color)) 1;
+  border-radius: 10px;
+  padding: 1em;
+}
+
 /* Card Styles */
 .card {
   background-color: rgba(45, 46, 49, 0.5);
@@ -379,4 +396,14 @@ img {
   background: var(--secondary-color);
   box-shadow: var(--secondary-color) 0 10px 20px -10px;
   color: var(--text-color);
+}
+
+.collapsible-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+}
+
+.collapsible-content.expanded {
+  max-height: 1000px; /* Adjust this value as needed */
 }
